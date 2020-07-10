@@ -43,6 +43,7 @@ const typeDefs = `
 
   type Query {
     getUser(id: ID!): User
+    getUsers: [User]
   }
 
   type Mutation {
@@ -52,4 +53,4 @@ const typeDefs = `
 
 const schema = makeExecutableSchema({ typeDefs, resolvers });
 
-export default { schema };
+export { schema };
