@@ -2,13 +2,11 @@ import express from 'express';
 import { graphqlHTTP } from 'express-graphql';
 
 // root imports
-import { schema } from './schema-schema-lang';
-import resolvers from './resolvers';
+import { schema } from './data/schema-schema-lang';
 
 // app variables
 const PORT = 3000;
 const app = express();
-const root = resolvers; // commented out for use with persistence techniques :)
 
 app.get('/', (req, res) => {
   res.send('GraphQl is cool');
