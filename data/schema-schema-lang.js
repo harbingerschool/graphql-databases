@@ -5,42 +5,6 @@ import { resolvers } from '../resolvers';
 import { makeExecutableSchema } from 'graphql-tools';
 
 const typeDefs = `
-  enum Gender {
-    MALE
-    FEMALE 
-    OTHER
-  }
-
-  input UserInput {
-    id: ID
-    firstName: String!
-    lastName: String!
-    gender: Gender
-    createdAt: String!
-    email: String!
-    contacts: [ContactInput]
-  }
-
-  type Contact {
-    firstName: String
-    lastName: String
-  }
-
-  input ContactInput {
-    firstName: String
-    lastName: String
-  }
-
-  type User {
-    id: ID
-    firstName: String
-    lastName: String
-    gender: Gender
-    createdAt: String
-    email: String
-    contacts: [Contact]
-  }  
-
   type Vehicle{
     id: ID
     make: String
@@ -49,7 +13,6 @@ const typeDefs = `
   }
 
   input VehicleInput{
-    id: ID
     make: String
     model: String
     year: Int
@@ -57,7 +20,7 @@ const typeDefs = `
 
   type Query {
     getVehiclesByYear(year: Int!): [Vehicle]
-    getVehicleById(id: Int!): [Vehicle]
+    getVehicleById(id: String!): [Vehicle]
   }
 
   type Mutation {
@@ -67,4 +30,6 @@ const typeDefs = `
 
 const schema = makeExecutableSchema({ typeDefs, resolvers });
 
-export default { schema };
+export { schema };
+
+
