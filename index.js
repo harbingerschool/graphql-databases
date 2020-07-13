@@ -1,6 +1,5 @@
 import express from 'express';
 import { graphqlHTTP } from 'express-graphql';
-import { constants } from './constants/db';
 
 // root imports
 import { schema } from './data/schema-schema-lang'; // for use with persistent DBs
