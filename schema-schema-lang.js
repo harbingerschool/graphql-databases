@@ -41,12 +41,27 @@ const typeDefs = `
     contacts: [Contact]
   }  
 
+  type Vehicle{
+    id: ID
+    make: String
+    model: String
+    year: Int
+  }
+
+  input VehicleInput{
+    id: ID
+    make: String
+    model: String
+    year: Int
+  }
+
   type Query {
-    getUser(id: ID!): User
+    getVehiclesByYear(year: Int!): [Vehicle]
+    getVehicleById(id: Int!): [Vehicle]
   }
 
   type Mutation {
-    createUser(input: UserInput): User
+    createVehicle(input: VehicleInput): Vehicle
   }
 `;
 
