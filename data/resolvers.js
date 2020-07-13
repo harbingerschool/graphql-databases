@@ -1,5 +1,5 @@
-import { connection } from './db/db'
-import Vehicle from './classes/Vehicle';
+import { connection } from '../db/db'
+import Vehicle from '../classes/Vehicle';
 
 /**
  * Resolver map to be used with graphql-tools makeExecutableSchema.

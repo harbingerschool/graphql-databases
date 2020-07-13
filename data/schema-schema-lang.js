@@ -1,7 +1,7 @@
 /** 
  * This file contains a schema construction using GraphQl's schema language.
 */
-import { resolvers } from '../resolvers';
+import { resolvers } from './resolvers';
 import { makeExecutableSchema } from 'graphql-tools';
 
 const typeDefs = `
