@@ -15,15 +15,6 @@ app.get('/', (req, res) => {
 })
 
 /**
- * GraphQL setup for usage with buildSchema object :)
- */
-// app.use('/graphql', graphqlHTTP({
-//   schema: schema,
-//   rootValue: root,
-//   graphiql: true,
-// }));
-
-/**
  * GraphQL setup for persistence, using schema language and makeExecutableSchema object 
  * from graphql-tools.
  */
