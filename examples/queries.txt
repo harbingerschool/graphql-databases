@@ -1,0 +1,31 @@
+# mutation example
+mutation{
+	createVehicle(input:{
+  	make: "ferrari"
+    model: "redboi"
+    year: 1995
+  }) {
+    id
+    make
+    model
+    year
+  }
+}
+
+# get all vehicles made in 1995
+{
+  getVehiclesByYear(year: 1995)
+  {
+    make
+    model
+  }
+}
+
+# get vehicle by id string
+{
+  getVehicleById(id:"0cea40c0c008cc1faeed"){
+    make
+    model
+    year
+  }
+}
