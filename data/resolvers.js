@@ -20,7 +20,6 @@ const resolvers = {
       return message;
     },
     getVehiclesByYear: async (root, input) => {
-      console.log(input);
       let sql = `SELECT * FROM Vehicles WHERE year=${input.year};`;
       const message = await new Promise((resolve, reject) => {
         connection.query(sql, (err, res) => {
