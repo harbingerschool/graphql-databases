@@ -13,16 +13,6 @@ const schema = buildSchema(`
     OTHER
   }
 
-  input UserInput {
-    id: ID
-    firstName: String!
-    lastName: String!
-    gender: Gender
-    createdAt: String!
-    email: String!
-    contacts: [ContactInput]
-  }
-
   type Contact {
     firstName: String
     lastName: String
@@ -31,6 +21,16 @@ const schema = buildSchema(`
   input ContactInput {
     firstName: String
     lastName: String
+  }
+
+  input UserInput {
+    id: ID
+    firstName: String!
+    lastName: String!
+    gender: Gender
+    createdAt: String!
+    email: String!
+    contacts: [ContactInput]
   }
 
   type User {
