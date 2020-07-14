@@ -1,14 +1,14 @@
 import mongoose from 'mongoose';
-import {constants} from '../constants/db';
+import { constants } from '../constants/db';
 
 // Mongo connection
 const mongoURI = constants.dbURI;
 mongoose.Promise = global.Promise; // use promise to connect to MongoDB
 
-
+// make the connection
 mongoose.connect(mongoURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 
 // check db connection
@@ -39,7 +39,5 @@ const userSchema = new mongoose.Schema({
   }
 });
 
-// create mongoose model
-// const User = mongoose.model('user', userSchema);
-// export default User;
+// export model
 module.exports = mongoose.model('User', userSchema);

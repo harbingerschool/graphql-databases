@@ -1,0 +1,37 @@
+// query example
+query {
+  user{
+    firstName
+    lastName
+    email
+  }
+}
+
+
+# mutation example
+mutation{
+  createUser(input: {
+    firstName: "Guglielmo"
+    lastName: "Marconi"
+    gender: MALE
+    createdAt: "1874"
+    email: "radio@rca.com"
+    contacts: [
+      {
+        firstName: "Nikola"
+      	lastName: "Tesla"
+      },
+      {
+        firstName: "Thomas"
+        lastName: "Edison"
+      }
+    ]
+  }) {
+    id
+    lastName
+    contacts {
+      firstName
+      lastName
+    }
+  }
+}
